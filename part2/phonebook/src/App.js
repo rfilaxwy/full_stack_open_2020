@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 //Components
 import AddNameForm from "./addNameform";
@@ -7,12 +8,17 @@ import Title from "./title";
 import Filter from "./filter";
 
 const App = () => {
-  const [persons, setPersons] = useState([
-    { name: "Arto Hellas", number: "247-866-5555" }
-  ]);
+  const [persons, setPersons] = useState([]);
   const [newName, setNewName] = useState("");
   const [newNumber, setNewNumber] = useState("");
   const [searchName, setSearchName] = useState("");
+
+  const hook = () => {
+    axios
+      .get("http://localhost:3001/persons")
+      .then(res => setPersons(res.data));
+  };
+  useEffect(hook, []);
 
   const handleNameChange = e => {
     setNewName(e.target.value);
