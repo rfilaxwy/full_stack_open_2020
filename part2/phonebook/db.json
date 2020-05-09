@@ -1,11 +1,6 @@
 {
   "persons": [
     {
-      "name": "Arto Hellas",
-      "number": "040-123456",
-      "id": 1
-    },
-    {
       "name": "Ada Lovelace",
       "number": "39-44-5323523",
       "id": 2
@@ -16,9 +11,19 @@
       "id": 3
     },
     {
-      "name": "Mary Poppendieck",
-      "number": "39-23-6423122",
+      "name": "VIng Stavros",
+      "number": "555-764",
       "id": 4
+    },
+    {
+      "name": "Bing Crosby",
+      "number": "765",
+      "id": 5
+    },
+    {
+      "name": "Wiggins T Booker",
+      "number": "8778777777",
+      "id": 6
     }
   ]
 }
